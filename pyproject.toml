@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "everything-laya"
+version = "0.1.0"
+description = "Ultra-fast, zero-overhead Model Context Protocol (MCP) server & developer toolkit for self-hosted Laya (ModernBERT System-1 reflex engine)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "Yuvraj Negy" }
+]
+keywords = [
+    "laya",
+    "mcp",
+    "model-context-protocol",
+    "claude-code",
+    "cursor",
+    "windsurf",
+    "ai-agents",
+    "system-1",
+    "modernbert",
+    "fast-inference",
+    "safety-guard",
+    "context-compactor"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+everything-laya = "everything_laya.cli:main"
+laya-mcp = "everything_laya.server:main"
+
+[project.urls]
+"Homepage" = "https://github.com/its-negy-lmsy/everything-laya"
+"Bug Tracker" = "https://github.com/its-negy-lmsy/everything-laya/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["everything_laya*"]
